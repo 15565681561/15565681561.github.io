@@ -1,5 +1,4 @@
-# hellow Word
+# 欢迎来到Mr.zhu的世界
 
 
-> hellow word!
-> 张雨晴是傻屌
+> 欢迎
