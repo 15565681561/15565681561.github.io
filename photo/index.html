@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<audio src="img/001.mp3" autoplay loop></audio>
 
 <div class="gallery">
   <div class="gallery__strip__wrapper">
@@ -18,7 +19,7 @@
 			<div class="photo">
 				<div class="photo__image">
 					 <!--video视频标签，给上宽高-->
-					 <video id="video" onmouseover="videoPlayback()" onmouseout="videoStopped()" width="250px" height="300px">
+					 <video id="video" onmouseover="videoPlayback()" onmouseout="videoStopped()" width="250px">
 					     <!-- 视频类型为视频和视频路径 -->
 					     <source type="audio/mp4" src="img/01%20(1).mp4"></source>
 					 </video>
@@ -45,15 +46,30 @@
         <div class="photo__image"><img src="img/01%20(4).jpg"></div>
         <div class="photo__name">Rio</div>
       </div>
+			<div class="photo">
+			  <div class="photo__image"><img src="img/02%20(6).jpg"></div>
+			  <div class="photo__name">Final</div>
+			</div>
+			
 			
 			<div class="photo">
-			  <div class="photo__image"><img src="img/01.jpg"></div>
-			  <div class="photo__name"></div>
+			  <div class="photo__image"><img src="img/02%20(1).jpg"></div>
+			  <div class="photo__name">Final</div>
 			</div>
     </div>
   </div>
   <div class="gallery__strip__wrapper">
     <div class="gallery__strip two">
+			<div class="photo">
+				<div class="photo__image">
+					 <!--video视频标签，给上宽高-->
+					 <video id="video1" onmouseover="videoPlayback1()" onmouseout="videoStopped1()" width="250px">
+					     <!-- 视频类型为视频和视频路径 -->
+					     <source type="audio/mp4" src="img/02%20(1).mp4"></source>
+					 </video>
+					</div>
+				<div class="photo__name">Kyoto</div>
+			</div>
       <div class="photo">
         <div class="photo__image"><img src="img/01%20(5).jpg"></div>
         <div class="photo__name">Italy</div>
@@ -70,15 +86,30 @@
         <div class="photo__image"><img src="img/01%20(8).jpg"></div>
         <div class="photo__name">Paris</div>
       </div>
+			<div class="photo">
+			  <div class="photo__image"><img src="img/02%20(7).jpg"></div>
+			  <div class="photo__name">Final</div>
+			</div>
 			
 			<div class="photo">
-			  <div class="photo__image"><img src="img/01.jpg"></div>
-			  <div class="photo__name"></div>
+			  <div class="photo__image"><img src="img/02%20(4).jpg"></div>
+			  <div class="photo__name">Final</div>
 			</div>
     </div>
   </div>
   <div class="gallery__strip__wrapper">
     <div class="gallery__strip three">
+			
+			<div class="photo">
+				<div class="photo__image">
+					 <!--video视频标签，给上宽高-->
+					 <video id="video2" onmouseover="videoPlayback()2" onmouseout="videoStopped()2" width="250px">
+					     <!-- 视频类型为视频和视频路径 -->
+					     <source type="audio/mp4" src="img/02%20(2).mp4"></source>
+					 </video>
+					</div>
+				<div class="photo__name">Kyoto</div>
+			</div>
       <div class="photo">
         <div class="photo__image"><img src="img/01%20(9).jpg"></div>
         <div class="photo__name">Cusco</div>
@@ -99,10 +130,14 @@
 			  <div class="photo__image"><img src="img/01%20(18).jpg"></div>
 			  <div class="photo__name">Kyoto</div>
 			</div>
+			<div class="photo">
+			  <div class="photo__image"><img src="img/02%20(8).jpg"></div>
+			  <div class="photo__name">Final</div>
+			</div>
 			
 			<div class="photo">
-			  <div class="photo__image"><img src="img/01.jpg"></div>
-			  <div class="photo__name"></div>
+			  <div class="photo__image"><img src="img/02%20(2).jpg"></div>
+			  <div class="photo__name">Final</div>
 			</div>
     </div>
   </div>
@@ -128,11 +163,14 @@
 			  <div class="photo__image"><img src="img/01%20(17).jpg"></div>
 			  <div class="photo__name">Kyoto</div>
 			</div>
-			
+			<div class="photo">
+			  <div class="photo__image"><img src="img/02%20(9).jpg"></div>
+			  <div class="photo__name">Final</div>
+			</div>
 			
 			<div class="photo">
-			  <div class="photo__image"><img src="img/01.jpg"></div>
-			  <div class="photo__name"></div>
+			  <div class="photo__image"><img src="img/02%20(3).jpg"></div>
+			  <div class="photo__name">Final</div>
 			</div>
     </div>
   </div>
@@ -168,5 +206,50 @@
              //停止播放
              video.pause();
          }
+				 
+				 
+				 //鼠标移进去
+				 function videoPlayback1(){
+				     //获取视频标签
+				     var video1 = document.getElementById('video1'); 
+				    //给视频标签添加缓存播放---video标签属性。
+				    video1.setAttribute("autoplay","autoplay")
+				    //给视频标签添加循环播放---video标签属性。
+				     video1.setAttribute("loop","loop")
+				     //播放视频
+				     video1.play();
+				 }
+				 
+				 //鼠标离开
+				 function videoStopped1(){
+				     //获取视频标签
+				     var oDiv = document.getElementById('video1'); 
+				     //停止播放
+				     video1.pause();
+				 }
+				 
+				 
+				 
+				 
+				 //鼠标移进去
+				 function videoPlayback2(){
+				     //获取视频标签
+				     var video2 = document.getElementById('video2'); 
+				    //给视频标签添加缓存播放---video标签属性。
+				    video2.setAttribute("autoplay","autoplay")
+				    //给视频标签添加循环播放---video标签属性。
+				     video2.setAttribute("loop","loop")
+				     //播放视频
+				     video2.play();
+				 }
+				 
+				 //鼠标离开
+				 function videoStopped2(){
+				     //获取视频标签
+				     var oDiv = document.getElementById('video2'); 
+				     //停止播放
+				     video2.pause();
+				 }
+				 
      </script>
 </html>

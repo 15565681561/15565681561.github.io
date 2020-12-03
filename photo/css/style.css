@@ -34,7 +34,7 @@ body {
 }
 @media (min-width: 950px) {
   .gallery {
-    height: 100vh;
+    height: 200vh;
   }
   .gallery__strip.one {
     animation: 60s move-it ease alternate infinite 5s;
