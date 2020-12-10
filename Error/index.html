@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>报错解析</title>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="wenben">
+			<div id="danhang">
+				<ul title="报错类型">
+					<li>报错类型</li>
+					<li><a href="#a500">500</a></li>
+					<li><a href="#a406">406</a></li>
+				</ul>
+			</div>
+
+			<div id="a500">
+				<p>
+					HTTP Status 500 - Request processing failed; nested exception is org.apache.ibatis.binding.BindingException:
+					Invalid <br>
+					bound statement (not found): com.buba.test.sijiliandong.dao.SiftDao.getGuo
+				</p>
+				<!-- <img id="smartPic1" src="img/500_01.png" width="500px" height="350px"> -->
+				<!-- <img src="img/500_01.png" width="500px" height="350px" onclick="this.width+=50;this.height+=50" onclick="javascript:window.open(this.src);" style="cursor:pointer;"/> -->
+				<!-- 图片编辑 -->
+				<div id="pageContent1">
+					<div id="imgContainer1">
+						<img id="imageFullScreen1" src="img/500_01.png" />
+					</div>
+					<div id="positionButtonDiv1">
+						<p><span> <img id="zoomInButton1" class="zoomButton1" src="images/zoomIn.png" title="zoom in" alt="zoom in" /> <img
+								 id="zoomOutButton1" class="zoomButton1" src="images/zoomOut.png" title="zoom out" alt="zoom out" /> </span> </p>
+						<p>
+							<span class="positionButtonSpan1">
+								<map name="positionMap1" class="positionMapClass1">
+									<area id="topPositionMap1" shape="rect" coords="20,0,40,20" title="move up" alt="move up" />
+									<area id="leftPositionMap1" shape="rect" coords="0,20,20,40" title="move left" alt="move left" />
+									<area id="rightPositionMap1" shape="rect" coords="40,20,60,40" title="move right" alt="move right" />
+									<area id="bottomPositionMap1" shape="rect" coords="20,40,40,60" title="move bottom" alt="move bottom" />
+								</map>
+								<img src="images/position.png" usemap="#positionMap1" />
+							</span>
+						</p>
+					</div>
+				</div>
+				<!-- 图片编辑结束 -->
+				<p>
+
+					未找到getGuo（）这个方法，方法是有的，原因是mapper.Xml没有被加载
+					解决方法：<br>
+					在pom文件中加
+				</p>
+				<p>
+					&lt;build&gt;<br>
+					&lt;resources&gt; <br>
+					&lt;resource&gt; <br>
+					&lt;directory&gt;src/main/java&lt;/directory&gt;<br>
+					&lt;includes&gt; <br>
+					&lt;include&gt;**/*.properties&lt;/include&gt;<br>
+					&lt;include&gt;**/*.xml&lt;/include&gt; <br>
+					&lt;/includes&gt;<br>
+					&lt;filtering&gt;false&lt;/filtering&gt; <br>
+					&lt;/resource&gt;<br>
+					&lt;/resources&gt;<br>
+					&lt;/build&gt;<br>
+				</p>
+			</div>
+
+
+			<div id="a406">
+				<p>
+					在用Layui上传图片的时候前端报错，控制台报406
+				</p>
+				<p>
+					HTTP Status 406 - <br>
+					type Status report<br>
+					message<br>
+					description The resource identified by this request is only capable of generating responses with characteristics
+					not acceptable according to the request "accept" headers.
+				</p>
+				<p>
+					<img src="img/406_01_1.png" width="80%" height="80%">
+				</p>
+				<p>
+					后来发现原因是传的类型不对,让返回JSON类型的数据，我返回的Map
+				</p>
+				<p>
+					<img src="img/406_01_2.png" width="80%" height="80%">
+				</p>
+				<p>
+					解决方法：<br>
+					把返回类型改成JSON
+				</p>
+				<p>
+					<img src="img/406_01_3.png" width="80%" height="80%">
+				</p>
+				<p>
+					问题成功解决
+				</p>
+				<p>
+					<img src="img/406_01_4.png" width="80%" height="80%">
+				</p>
+
+			</div>
+
+
+		</div>
+		<script src="http://www.lanrenzhijia.com/ajaxjs/1.11.0/jquery-1.11.0.min.js"></script>
+		<script src="js/e-smart-zoom-jquery.min.js"></script>
+		<script type="text/javascript" src="js/style.js"></script>
+	</body>
+</html>

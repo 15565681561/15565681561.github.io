@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Layui+ssm上传图片</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src=""></script>
+	</head>
+	<body>
+		<h1>Layui+ssm上传图片</h1>
+		<div id="wenben">
+			<div id="neirong">
+				<p>
+					1、在pom文件中导入上传文件需要的jar包
+				</p>
+				<p>
+					<img src="img/01.png" width="80%" height="80%" >
+				</p>
+				<p>
+					2、在springmvc.xml中配置multipartResolver别忘了把静态资源放行
+				</p>
+				<p>
+					<img src="img/02.png" width="80%" height="80%" >
+				</p>
+				<p>
+					3、导入Layui文件
+				</p>
+				<p>
+					<img src="img/03.png" width="250px" height="500px" >
+				</p>
+				<p>
+					4、配置路径其中 multiple: true 表示可以多文件上传 默认false
+				</p>
+				<p>
+					<img src="img/04.png" width="80%" height="80%" >
+				</p>
+				<p>
+					5、在Controller中操作，返回类型为json格式，并且按Layui要求返回的数据中要有
+					code、msg和data data中存放照片上传的路径
+				</p>
+				<p>
+					<img src="img/05.png" width="80%" height="80%" >
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

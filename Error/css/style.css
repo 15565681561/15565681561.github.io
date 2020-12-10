@@ -1,0 +1,90 @@
+html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				/* overflow: hidden; */
+				background-color: #000000;
+			}
+
+			#wenben {
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: bisque;
+				width: 100%;
+				height: 100%;
+			}
+
+			li {
+				margin-top: 10px;
+				list-style-type: none;
+				color: aqua;
+			}
+
+			a {
+				text-decoration: none;
+				color: blueviolet;
+			}
+
+			#danhang {
+				position: fixed;
+				top: 50px;
+				left: 10px;
+			}
+
+			#a500 {
+				position: absolute;
+				left: 150px;
+			}
+			#a406{
+				position: relative;
+				top: 1000px;
+				left: 150px;
+			}
+	
+
+			/* 图片 */
+			#pageContent1 {
+				width: 980px;
+				height: 500px;
+				overflow: hidden;
+				position: relative;
+				margin: 50px auto;
+			}
+
+			#imgContainer1 {
+				width: 980px;
+				height: 500px;
+			}
+
+			#positionButtonDiv1 {
+				background: rgb(58, 56, 63);
+				background: rgba(58, 56, 63, 0.8);
+				border: solid 1px #100000;
+				color: #fff;
+				padding: 8px;
+				text-align: left;
+				position: absolute;
+				right: 35px;
+				top: 35px;
+			}
+
+			#positionButtonDiv1 .positionButtonSpan1 img {
+				float: right;
+				border: 0;
+			}
+
+			.positionMapClass1 area {
+				cursor: pointer;
+			}
+
+			.zoomButton1 {
+				border: 0;
+				cursor: pointer;
+			}
+
+			.zoomableContainer1 {
+				background-image: url("images/transparent.png");
+			}
