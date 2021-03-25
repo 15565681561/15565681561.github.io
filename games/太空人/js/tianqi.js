@@ -1,6 +1,6 @@
 $(function(){
 			$.ajax({
-				type: "post",
+				type: "GET",
 				/*
 				*citykey城市id
 				* */
