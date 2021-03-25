@@ -4,7 +4,7 @@ $(function(){
 				/*
 				*citykey城市id
 				* */
-				url: "//wthrcdn.etouch.cn/weather_mini?citykey=101010700",
+				url: "http//wthrcdn.etouch.cn/weather_mini?citykey=101010700",
 				success: function(results){
 					
 				var data = jQuery.parseJSON(results); 
