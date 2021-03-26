@@ -16,6 +16,7 @@ $(function(){
 				  $("#high").html(str);
 				  var str1=data.data.forecast[0].low.substr(2)
 				  $("#low").html(str1);
+				  $("#city").html(data.data.city+"区");
 				},error: function(error){
           
 				}
