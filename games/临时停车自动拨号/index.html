@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>挪个车-自动电话-术の語、涼城</title>
+        <style>
+            *{margin:0;padding:0;font-family:"PingFangSC-Regular","Microsoft YaHei", "微软雅黑", verdana, sans-serif, Simsun, STXihei;zoom:1;}
+            body{padding: 0 15px;background: #fafafa;}
+            .f-dn{display: none;}
+            .f-margin-top-5{margin-top: 5px;}
+            .bold{font-weight: bold;}
+            .title{text-align: center;font-size: 20px;height: 28px;line-height: 28px;margin-top: 35px;}
+            .title-info{margin-top: 5px;font-size: 15px;text-align: center;}
+            .qrcode-body{margin-top: 24px;border:1px solid #b9b9b9;background: #fff;padding:25px 15px;font-size: 16px;border-radius: 6px;}
+            .qrcode-body .step1 .step-title{color: #656565;margin-top: 0px;}
+            .qrcode-body .step-title{margin-top: 20px;margin-bottom: 10px;}
+            .qrcode-body .step p{font-size: 15px;line-height: 25px;}
+            .qrcode-footer{color: #656565;font-size: 15px;margin-top: 14px;}
+            .j-manaul{text-decoration: none;display: inline-block;border-radius: 6px;width: 110px;height: 26px;line-height: 26px;text-align: center;color: #3B78DD ;border:1px solid #3B78DD;margin-left: 5px;}
+            .f-manaul{text-decoration: none;display: inline-block;border-radius: 6px;width: 110px;height: 26px;line-height: 26px;text-align: center;color: #3B78DD ;border:1px solid #3B78DD;margin-left: 5px;}
+            .sms-body{margin-top: 35px;font-size: 15px;}
+            .sms-body .step-body{border:1px solid #B9B9B9;border-radius: 6px;background: #fff;margin: 8px 0;}
+            .sms-body .step-info{color: #656565;margin-bottom: 32px;}
+            .sms-body .step-body p{height: 42px;line-height: 42px;padding-left: 25px;}
+            .sms-body .step-body p span{font-weight: bold;}
+            .sms-body .step-body p:first-child{border-bottom: 1px solid #B9B9B9;}
+            .sms-body .step2 .step-body{padding:15px;line-height: 25px;}
+        </style>
+	</head>
+	<body>
+        <div class="qrcode">
+            <div class="title bold">术の語、涼城，温馨提醒您！</div>
+            <div class="title-info">临时停靠，请多关照</div>
+            <div align="center"><a class="title f-manaul">鲁A00001</a></div>
+            <div class="qrcode-body">
+                <div class="step step1">
+                	<div class="step-title">第一步：手机扫描二维码（已完成）</div>
+                    <p>我的爱车如果阻碍了您的车辆通过</p>
+                    <p>请扫描二维码联系我</p>
+                </div>
+                <div class="step step2">
+                    <div class="step-title bold">第二步：点击呼叫</div>
+                    <p>手机号码自动填充，无需手动输入，只需点击发送按钮即可</p>
+                    <p>电话费用由运营商收取</p>
+                </div>
+                <div class="step step3">
+                    <div class="step-title bold">第三步：呼叫成功</div>
+                    <p>非常抱歉，请耐心等待，车主正在速速赶往</p>
+                </div>
+            </div>
+            <div class="qrcode-footer">
+                <div>没有跳转到呼叫界面？<a href="javascript:location.reload();" class="f-manaul">点击重试</a></div>
+                <div class="f-margin-top-5">可尝试再次扫码或<a href="javascript:;" class="j-manaul">手动拨号</a></div>
+            </div>
+        </div>
+        <div class="sms f-dn">
+            <div class="title bold">挪个车-自动电话-术の語、涼城</div>
+            <div class="title-info">手动拨号说明</div>
+            <div class="sms-body">
+                <div class="step step1">
+                    <div class="step-title bold">第一步：输入号码</div>
+                    <div class="step-body">
+                        <p>输入号码：<span>18888888888</span></p>
+                    </div>
+                    <div class="step-info">通话费用由运营商收取</div>
+                </div>
+                <div class="step step2">
+                    <div class="step-title bold">第二步：点击呼叫</div>
+                    <div class="step-body">
+                        呼叫完成后，请耐心等待，车主正在速速赶往
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </body>
+            <div class="qrcode-footer">
+                <div>电话没回应？发个短信试试：<a href="sms:18888888888?body=挪个车-短信-测试"class="f-manaul">点击发送</a>
+            </div>
+    <script type="text/javascript" src="static/js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function(){
+
+            $('.j-manaul').click(function(){
+                $('.qrcode').hide();  
+                $('.sms').show();  
+            })
+
+            $('.j-qrcode').click(function(){
+                $('.qrcode').show();  
+                $('.sms').hide();  
+            })
+
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;//判断是否是 android终端
+            var isUc = u.indexOf('UCBrowser') > -1; 
+            var  isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            if(isIOS&&!isUc){
+                window.location.href = 'tel:18888888888">';
+            }else if(isAndroid || isUc){
+                window.location.href = 'tel:18888888888">'; 
+            }
+        })
+    </script>
+    <!--撸码不易，各位站长自行决定-->
+<!--    <br><br><br><a href="https://www.x6d.com/" class="f-manaul">小刀娱乐网</a><a href="https://vvccc.top/" class="f-manaul">涼城导航</a><a href="https://sgd.vvccc.top/" class="f-manaul">学习导航</a></div>
+ --><!--百度统计-->
+<!--使用源码请更改统计id-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ea4bfdf1e85db9c3cce508d417a09f92";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--感觉这东西不需要推送，如果需要自行添加-->
+<!--使用方法：去掉注释，360更改推送id-->
+<!--百度自动推送-->
+<!--<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>-->
+
+<!--360自动推送-->
+<!--<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?这里是id";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>-->
+</html>
