@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=750, user-scalable=no">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="">
+<title>校小虎签约流程</title>
+<style>
+*{ margin:0px; padding:0px; box-sizing:border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+html{ max-width:750px; margin:0 auto;}
+body{ font-family:"PingFangSC-Regular","sans-serif","STHeitiSC-Light","微软雅黑","Microsoft YaHei"; font-size:28px; line-height:1.6; color:#212121;
+    -webkit-user-select:none; user-select:none;
+    -webkit-touch-callout:none; touch-callout:none;
+}
+html , body{ width:100%; height:100%; position:relative; overflow:hidden;}
+ 
+/***************************/
+.page_box{ width:100%; height:100%; position:relative; overflow:hidden;}
+.page{ width:100%; height:100%; position:absolute; left:0; top:0; overflow:hidden;
+	 display:flex; flex-direction: column; justify-content:center; align-items:center;
+}
+.page.hide{ display:none;}
+ 
+.page.inTop{
+	-webkit-animation:ShowTop .5s ease-out both;
+					animation:ShowTop .5s ease-out both;
+}
+.page.outTop{
+	-webkit-animation:HideTop .5s ease-out both;
+					animation:HideTop .5s ease-out both;
+}
+.page.inDown{
+	-webkit-animation:ShowDown .5s ease-out both;
+					animation:ShowDown .5s ease-out both;
+}
+.page.outDown{
+	-webkit-animation:HideDown .5s ease-out both;
+					animation:HideDown .5s ease-out both;
+}
+@-webkit-keyframes ShowTop{
+	0%{ -webkit-transform:translateY(100%);}
+	100%{ -webkit-transform:translateY(0);}
+}
+@keyframes ShowTop{
+	0%{ transform:translateY(100%);}
+	100%{ transform:translateY(0);}
+}
+@-webkit-keyframes HideTop{
+	0%{ -webkit-transform:translateY(0);}
+	100%{ -webkit-transform:translateY(-100%);}
+}
+@keyframes HideTop{
+	0%{ transform:translateY(0);}
+	100%{ transform:translateY(-100%);}
+}
+@-webkit-keyframes ShowDown{
+	0%{ -webkit-transform:translateY(-100%);}
+	100%{ -webkit-transform:translateY(0);}
+}
+@keyframes ShowDown{
+	0%{ transform:translateY(-100%);}
+	100%{ transform:translateY(0);}
+}
+@-webkit-keyframes HideDown{
+	0%{ -webkit-transform:translateY(0);}
+	100%{ -webkit-transform:translateY(100%);}
+}
+@keyframes HideDown{
+	0%{ transform:translateY(0);}
+	100%{ transform:translateY(100%);}
+}
+ 
+.arrow{ width:60px; height:52px; color: #f00; font-size: 36px; position:absolute; left:50%; margin-left: -30px; bottom:0;
+	-webkit-animation:fadeIn .5s 1s ease-in-out both;
+					animation:fadeIn .5s 1s ease-in-out both;
+}
+.arrow.hide{ display:none;}
+.arrow div:first-child , .arrow div:last-child{ display: flex; justify-content: center; align-items: center; width:60px; height: 40px; position:absolute; left:0;
+	-webkit-transform-origin:center top;
+					transform-origin:center top;
+}
+.arrow div:first-child{ top:0;
+	-webkit-animation:arrow .8s .5s ease-in-out infinite alternate;
+					animation:arrow .8s .5s ease-in-out infinite alternate;
+}
+.arrow div:last-child{ top:12px;
+	-webkit-animation:arrow .8s .8s ease-in-out infinite alternate;
+					animation:arrow .8s .8s ease-in-out infinite alternate;
+}
+@-webkit-keyframes arrow{
+	100%{ -webkit-transform:translateY(-50%); opacity:1;}
+	0%{ -webkit-transform:translateY(0); opacity:0;}
+}
+@keyframes arrow{
+	100%{ transform:translateY(-50%); opacity:1;}
+	0%{ transform:translateY(0); opacity:0;}
+}
+/***************************/
+ 
+@-webkit-keyframes fadeInMinToMax{
+	0%{ -webkit-transform:scale(0); opacity:0;}
+	100%{ -webkit-transform:scale(1); opacity:1;}
+}
+@keyframes fadeInMinToMax{
+	0%{ transform:scale(0); opacity:0;}
+	100%{ transform:scale(1); opacity:1;}
+}
+.page{ font-size: 40px; background:url(data:image/jpg;base64,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) repeat-y; background-size:100%;}
+.page1_title{ width:80%; height:100px; line-height:100px; margin: 0 auto; text-align: center; font-size: 50px;
+	-webkit-animation:fadeInMinToMax .8s .4s ease-out both;
+					animation:fadeInMinToMax .8s .4s ease-out both;
+}
+.page1 .scroll_box{ width:80%; height:60vh; margin: 0 auto; overflow-y:auto; -webkit-overflow-scrolling:touch;
+	-webkit-animation:fadeInMinToMax 1.5s .4s ease-out both;
+					animation:fadeInMinToMax 1.5s .4s ease-out both;
+}
+.page2 .scroll_box{ width: 100%; height: 100%; text-align: center; overflow-y: auto; -webkit-overflow-scrolling: touch;}
+.page2 .scroll_box > div{ padding: 50px 0 80px 0;}
+.page2_body div:nth-child(1) , .page3_body div:nth-child(1){
+	-webkit-animation:fadeInMinToMax .8s .4s ease-out both;
+					animation:fadeInMinToMax .8s .4s ease-out both;
+}
+.page2_body div:nth-child(2) , .page3_body div:nth-child(2){
+	-webkit-animation:fadeInMinToMax .8s .5s ease-out both;
+					animation:fadeInMinToMax .8s .5s ease-out both;
+}
+.page2_body div:nth-child(3) , .page3_body div:nth-child(3){
+	-webkit-animation:fadeInMinToMax .8s .6s ease-out both;
+					animation:fadeInMinToMax .8s .6s ease-out both;
+}
+.page2_body div:nth-child(4) , .page3_body div:nth-child(4){
+	-webkit-animation:fadeInMinToMax .8s .7s ease-out both;
+					animation:fadeInMinToMax .8s .7s ease-out both;
+}
+.page2_body div:nth-child(5) , .page3_body div:nth-child(5){
+	-webkit-animation:fadeInMinToMax .8s .8s ease-out both;
+					animation:fadeInMinToMax .8s .8s ease-out both;
+}
+.page2_body div:nth-child(6) , .page3_body div:nth-child(6){
+	-webkit-animation:fadeInMinToMax .8s .9s ease-out both;
+					animation:fadeInMinToMax .8s .9s ease-out both;
+}
+.page2_body div:nth-child(7) , .page3_body div:nth-child(7){
+	-webkit-animation:fadeInMinToMax .8s 1s ease-out both;
+					animation:fadeInMinToMax .8s 1s ease-out both;
+}
+.page2_body div:nth-child(8) , .page3_body div:nth-child(8){
+	-webkit-animation:fadeInMinToMax .8s 1.1s ease-out both;
+					animation:fadeInMinToMax .8s 1.1s ease-out both;
+}
+.page2_body div:nth-child(9) , .page3_body div:nth-child(9){
+	-webkit-animation:fadeInMinToMax .8s 1.2s ease-out both;
+					animation:fadeInMinToMax .8s 1.2s ease-out both;
+}
+.page2_body div:nth-child(10) , .page3_body div:nth-child(10){
+	-webkit-animation:fadeInMinToMax .8s 1.3s ease-out both;
+					animation:fadeInMinToMax .8s 1.3s ease-out both;
+}
+img{
+	width: 100%;
+}
+p{
+	width: 100%
+}
+.imghw{
+	width: 80%;margin-left: 10%;
+}
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(-360deg);}
+}
+@-webkit-keyframes rotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(360deg);}
+}
+#musicControl { position:fixed;right:10px;top:20px;margin-top:0;display:inline-block;z-index:99999999}
+#musicControl a { display:inline-block;width:25px;height:25px;overflow:hidden;background:url('./img/001.jpg') no-repeat;background-size:100%;}
+#musicControl a audio{width:100%;height:56px;}
+#musicControl a.stop { background-position:left bottom;}
+#musicControl a.on { background-position:0px 1px;-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+#music_play_filter{width:100%;height:100%;overflow:hidden;position:fixed;top:0;left:0;z-index:99999998;}
+</style>
+</head>
+ 
+<body>
+<div class="page_box">
+	<div id="">
+		<span id="musicControl">
+		        <a id="mc_play" class="on" onclick="play_music();">
+		            <audio id="musicfx" loop="loop" autoplay="autoplay">
+		                <source src="mp3/AquaLabyrinth.mp3">
+		            </audio>
+		        </a>
+		 </span>
+	</div>
+	<div class="page page1">
+		<div class="page1_body">
+			<div class="page1_title">微信校园刷脸服务签约流程</div>
+			<div class="scroll_box">
+				<div>
+					<p>　打开微信点击右上角“＋号”，选择“添加朋友”</p>
+					<p><img src="img/图片1.jpg" ></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page page2 hide">
+		<div class="page2_body scroll_box">
+			<div>
+				<p>　选择搜索公众号，输入“校小虎”</p>
+				<p class="imghw"><img src="img/图片2.jpg" ></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page page3 hide">
+		<div class="page3_body scroll_box">
+			<p>　　点击小老虎头进入　　</p>
+			<p><img src="img/图片3.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page4 hide">
+		<div class="page4_body scroll_box">
+			<p>　　　点击关注公众号　　　</p>
+			<p><img src="img/图片4.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page5 hide">
+		<div class="page5_body scroll_box">
+			<p>进入公众号后，点击右下角“校园服务”</p>
+			<p ><img src="img/图片5.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page6 hide">
+		<div class="page6_body scroll_box">
+			<p>　点击选择“微信一键登录”（微信需要实名认证并绑定手机号）</p>
+			<p class="imghw"><img src="img/图片6.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page7 hide">
+		<div class="page7_body scroll_box">
+			<p>　跳转页面后，点击“点击授权”　</p>
+			<p><img src="img/图片7.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page8 hide">
+		<div class="page8_body scroll_box">
+			<p>　如已显示学生姓名信息，可直接点击底部“工作台”中的“支付签约”进行采集人脸和签约代扣。（跳过绑定身份步骤）</p>
+			<p class="imghw"><img src="img/图片8.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page9 hide">
+		<div class="page9_body scroll_box">
+			<p>　未显示学生信息，提示（点击绑定身份）请点击右下角“我的”</p>
+			<p class="imghw"><img src="img/图片9.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page10 hide">
+		<div class="page10_body scroll_box">
+			<p>　　　　点击绑定身份　　　</p>
+			<p><img src="img/图片10.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page11 hide">
+		<div class="page11_body scroll_box">
+			<p>　选择您所对应的身份，依次输入学校（南阳市第二中学校)、姓名、身份证号和登记类型，点击“确定”</p>
+			<p class="imghw"><img src="img/图片11.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page12 hide">
+		<div class="page12_body scroll_box">
+			<p>　绑定身份后，点击底部“工作台”选择“支付签约”</p>
+			<p class="imghw"><img src="img/图片12.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page13 hide">
+		<div class="page13_body scroll_box">
+			<p>　　　点击“人脸录入”　　　</p>
+			<p ><img src="img/图片13.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page14 hide">
+		<div class="page14_body scroll_box">
+			<p>　认真阅读图片中红色注意事项，点击开始拍照</p>
+			<p class="imghw"><img src="img/图片14.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page15 hide">
+		<div class="page15_body scroll_box">
+			<p>依照图一注意事项拍摄被采集者的人脸</p>
+			<p ><img src="img/图片15.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page16 hide">
+		<div class="page16_body scroll_box">
+			<p>　确认采集的人脸照片清晰且完整，点击“√号”</p>
+			<p class="imghw"><img src="img/图片16.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page17 hide">
+		<div class="page17_body scroll_box">
+			<p>　验证成功后，点击“确定”　</p>
+			<p ><img src="img/图片17.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page18 hide">
+		<div class="page18_body scroll_box">
+			<p>　跳转之后，点击“绑定银行卡”</p>
+			<p><img src="img/图片18.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page19 hide">
+		<div class="page19_body scroll_box">
+			<p>　输入中国银行的银行卡号等信息后，点击“确认绑定”</p>
+			<p class="imghw"><img src="img/图片19.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page20 hide">
+		<div class="page20_body scroll_box">
+			<p>绑定银行卡成功后，点击“支付签约”</p>
+			<p><img src="img/图片20.png" ></p>
+		</div>
+	</div>
+	<div class="page page21 hide">
+		<div class="page21_body scroll_box">
+			<p>　跳转之后，点击“确认并开通”</p>
+			<p><img src="img/图片21.png" ></p>
+		</div>
+	</div>
+	<div class="page page22 hide">
+		<div class="page22_body scroll_box">
+			<p>　输入被采集者的姓名和学校，点击“下一步”</p>
+			<p class="imghw"><img src="img/图片22.png" ></p>
+		</div>
+	</div>
+	<div class="page page23 hide">
+		<div class="page23_body scroll_box">
+			<p>　再次核对照片、姓名、学校后，点击“确认无误”</p>
+			<p class="imghw"><img src="img/图片23.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page24 hide">
+		<div class="page24_body scroll_box">
+			<p>　跳转后，扣费方式会限定为之前绑定的中国银行卡，点击“开通免密支付”</p>
+			<p class="imghw"><img src="img/图片24.jpg" ></p>
+		</div>
+	</div>
+	<div class="page page25 hide">
+		<div class="page25_body scroll_box">
+			<p>　　　　点击“开通”　　　　</p>
+			<p ><img src="img/图片25.png" ></p>
+		</div>
+	</div>
+	<div class="page page26 hide">
+		<div class="page26_body scroll_box">
+			<p>　输入当前微信账号的支付密码　</p>
+			<p ><img src="img/图片26.png" ></p>
+		</div>
+	</div>
+	<div class="page page27 hide">
+		<div class="page27_body scroll_box">
+			<p>显示免密支付已开通，点击“返回”</p>
+			<p><img src="img/图片27.png" ></p>
+		</div>
+	</div>
+	<div class="page page28 hide">
+		<div class="page28_body scroll_box">
+			<p>　跳转页面后，显示人脸录入“已录入”，银行卡“已绑定”和支付签约“已签约”表示已经完成采脸和签约</p>
+			<p class="imghw"><img src="img/图片28.png" ></p>
+		</div>
+	</div>
+	
+	<div class="arrow">
+		<div>
+			<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2859"><path d="M491.42 412.298c7.887 12.378 6.427 28.995-4.381 39.803L204.196 734.944l-90.51-90.51c-12.496-12.497-12.496-32.758 0-45.255L396.53 316.337l0.265 0.265 89.974-89.975c12.497-12.496 32.758-12.496 45.255 0l395.98 395.98-90.51 90.51c-12.497 12.497-32.758 12.497-45.255 0L491.42 412.297z" p-id="2860"></path></svg>
+		</div>
+		<div>
+			<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2859"><path d="M491.42 412.298c7.887 12.378 6.427 28.995-4.381 39.803L204.196 734.944l-90.51-90.51c-12.496-12.497-12.496-32.758 0-45.255L396.53 316.337l0.265 0.265 89.974-89.975c12.497-12.496 32.758-12.496 45.255 0l395.98 395.98-90.51 90.51c-12.497 12.497-32.758 12.497-45.255 0L491.42 412.297z" p-id="2860"></path></svg>
+		</div>
+	</div>
+</div>
+ 
+<script type="text/javascript">
+// element 作用区域（所有执行翻页页面的父级元素DOM）
+// isLoop 是否循环执行翻页
+// needScrollClass 执行翻页页面内部可滚动元素样式名
+function setChangePage(element,isLoop,needScrollClass){
+	// console.log(element.querySelectorAll('.page'));
+	// console.log(element.querySelectorAll('.page').length);
+	// console.log(element.querySelector('.page'));
+	// console.log(element.querySelector('.page2'));
+	var pageData = {
+		curPage:1,
+		prevPage:null,
+		PageL:element.querySelectorAll('.page').length,
+		type:null,
+		canTouch:true,
+		startY:0,
+		endY:0,
+		diff:0,
+	}
+	element.addEventListener("touchstart", touchStart, false);
+	element.addEventListener("touchmove", touchMove, false);
+	element.addEventListener("touchend", touchEnd, false);
+	function touchStart(e){
+		pageData.startY = e.touches[0].pageY;
+		pageData.endY = '';
+		pageData.diff = '';
+	}  
+	function touchMove(e){
+		e.preventDefault();
+		pageData.endY = e.touches[0].pageY;
+		pageData.diff = pageData.endY - pageData.startY;
+	}
+	function touchEnd(e){
+		if(Math.abs(pageData.diff) > 150 && pageData.canTouch){
+			changeDoBefore(pageData.diff);
+		}
+		// setTimeout(function(){
+			pageData.startY = '';
+			pageData.endY = '';
+			pageData.diff = '';
+		// },500);
+	}
+	function changeDoBefore(diffNum){
+		if(diffNum > 0){
+			// 向下滑动进入前一页
+			pageData.type = 2;
+			if(pageData.curPage <= 1){
+				if(isLoop){
+					pageData.prevPage = 1;
+					pageData.curPage = pageData.PageL;
+					changeDo();
+				}
+			}else{
+				pageData.prevPage = pageData.curPage;
+				pageData.curPage--;
+				changeDo();
+			}
+		}else{
+			// 向上滑动进入下一页
+			pageData.type = 1;
+			if(pageData.curPage >= pageData.PageL){
+				if(isLoop){
+					pageData.prevPage = pageData.PageL;
+					pageData.curPage = 1;
+					changeDo();
+				}
+			}else{
+				pageData.prevPage = pageData.curPage;
+				pageData.curPage++;
+				changeDo();
+			}
+		}
+	}
+	function changeDo(){
+		if(pageData.type == 1){
+			element.querySelector('.page' + pageData.prevPage).classList.remove('inTop' , 'outTop' , 'inDown' , 'outDown' , 'hide');
+			element.querySelector('.page' + pageData.prevPage).classList.add('outTop');
+			element.querySelector('.page' + pageData.curPage).classList.remove('inTop' , 'outTop' , 'inDown' , 'outDown' , 'hide');
+			element.querySelector('.page' + pageData.curPage).classList.add('inTop');
+		}else if(pageData.type == 2){
+			element.querySelector('.page' + pageData.prevPage).classList.remove('inTop' , 'outTop' , 'inDown' , 'outDown' , 'hide');
+			element.querySelector('.page' + pageData.prevPage).classList.add('outDown');
+			element.querySelector('.page' + pageData.curPage).classList.remove('inTop' , 'outTop' , 'inDown' , 'outDown' , 'hide');
+			element.querySelector('.page' + pageData.curPage).classList.add('inDown');
+		}
+ 
+		if(needScrollClass){
+			scrollEleData.canTouch = false;
+			setTimeout(function(){
+				scrollEleData.canTouch = true;
+			},500);
+		}
+ 
+		pageData.canTouch = false;
+		setTimeout(function(){
+			pageData.canTouch = true;
+			element.querySelector('.page' + pageData.prevPage).classList.add('hide');
+		},500);
+		// 不循环切换时设置最后一页时隐藏向上箭头
+		if(pageData.curPage >= pageData.PageL){
+			if(!isLoop){
+				element.querySelector('.arrow').classList.add('hide');
+			}
+		}else{
+			if(!isLoop){
+				element.querySelector('.arrow').classList.remove('hide');
+			}
+		}
+		// 执行翻页页面内部可滚动时，设置进入页面后滚动条位置
+		if(needScrollClass && element.querySelector('.page' + pageData.curPage).querySelector('.' + needScrollClass)){
+			element.querySelector('.page' + pageData.curPage).querySelector('.' + needScrollClass).scrollTop = 0;
+		}
+	}
+	// 执行翻页页面内部可滚动
+	if(needScrollClass){
+		var scrollEleData = {
+			canTouch:true,
+			startY:0,
+			endY:0,
+			diff:0,
+		}
+		// console.log(element.querySelectorAll('.' + needScrollClass).length);
+		element.querySelectorAll('.' + needScrollClass).forEach(function(item,index){
+			// console.log(item,index);
+			item.addEventListener("touchstart", scrollEleTouchStart, false);
+			item.addEventListener("touchmove", scrollEleTouchMove, false);
+			item.addEventListener("touchend", scrollEleTouchEnd, false);
+			function scrollEleTouchStart(e){
+				// e.stopPropagation();
+				element.removeEventListener("touchmove", touchMove, false);
+				scrollEleData.startY = e.touches[0].pageY;
+				scrollEleData.endY = '';
+				scrollEleData.diff = '';
+			}  
+			function scrollEleTouchMove(e){
+				scrollEleData.endY = e.touches[0].pageY;
+				scrollEleData.diff = scrollEleData.endY - scrollEleData.startY;
+			}
+			function scrollEleTouchEnd(e){
+				element.addEventListener("touchmove", touchMove, false);
+				// console.log(scrollEleData.canTouch);
+				if(Math.abs(scrollEleData.diff) > 150 && scrollEleData.canTouch){
+					changeDoBefore(scrollEleData.diff);
+				}
+				// setTimeout(function(){
+					scrollEleData.startY = '';
+					scrollEleData.endY = '';
+					scrollEleData.diff = '';
+				// },500);
+			}
+			item.addEventListener("scroll", scrollDo, false);
+			function scrollDo(e){
+				// console.log(e.target.clientHeight , e.target.scrollTop , e.target.scrollHeight);
+				if((e.target.clientHeight + e.target.scrollTop + 2 >= e.target.scrollHeight) || (e.target.scrollTop == 0)){
+					setTimeout(function(){
+						scrollEleData.canTouch = true;
+					},500);
+				}else{
+					scrollEleData.canTouch = false;
+				}
+			}
+		})
+	}
+}
+ 
+/***************************/
+ 
+// 例：
+// 循环执行翻页
+setChangePage(document.getElementsByClassName('page_box')[0],'loop','scroll_box');
+// 不循环执行翻页
+// setChangePage(document.getElementsByClassName('page_box')[0],'','scroll_box');
+
+</script>
+<script>
+function play_music(){
+            if ($('#mc_play').hasClass('on')){
+                $('#mc_play audio').get(0).pause();
+                $('#mc_play').attr('class','stop');
+            }else{
+                $('#mc_play audio').get(0).play();
+                $('#mc_play').attr('class','on');
+            }
+            $('#music_play_filter').hide();
+            event.stopPropagation(); //阻止冒泡
+        }
+        function just_play(id){
+            $('#mc_play audio').get(0).play();
+            $('#mc_play').attr('class','on');
+            if (typeof(id)!='undefined'){
+                $('#music_play_filter').hide();
+            }
+            event.stopPropagation(); //阻止冒泡
+        }
+        var play_filter=document.getElementById('music_play_filter');
+        play_filter.addEventListener('click', function(){
+            just_play(1);
+        });
+        play_filter.addEventListener('touchstart', function(){
+            just_play(1);
+        });
+        play_filter.addEventListener('touchend', function(){
+            just_play(1);
+        });
+        play_filter.addEventListener('touchmove', function(){
+            just_play(1);
+        });
+        play_filter.addEventListener('mousedown', function(){
+            just_play(1);
+        });
+        play_filter.addEventListener('mouseup', function(){
+            just_play(1);
+        });
+        play_filter.addEventListener('mousemove',function(){
+            just_play(1);
+        });
+ </script>
+</body>
+</html>
